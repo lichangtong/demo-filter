@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Created by Administrator on 2018/10/17/017.
  */
-@RestController
+//@RestController
 public class ErrorHandlerController implements ErrorController {
     @Override
     public String getErrorPath() {

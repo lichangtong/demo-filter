@@ -12,6 +12,8 @@
         <module name="demo-server" />
         <module name="demo-server2" />
         <module name="demo-server3" />
+        <module name="demo-turbine" />
+        <module name="demo-user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -22,6 +24,8 @@
       <module name="demo-server" target="1.8" />
       <module name="demo-server2" target="1.8" />
       <module name="demo-server3" target="1.8" />
+      <module name="demo-turbine" target="1.8" />
+      <module name="demo-user" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

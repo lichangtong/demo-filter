@@ -3,7 +3,14 @@ package com.example.config.para;
 import java.io.Serializable;
 import java.util.Map;
 
-
+/**
+ *
+ * 功能描述: JSON 入参转换类
+ * @param:
+ * @date: 2018/10/24 0024 19:33
+ * @return:
+ * @auther: lichangtong
+ */
 public class RequestParas implements Serializable {
     //接口参数
     private Map<String, String> map;

@@ -3,12 +3,14 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/../demo-filter/pom.xml" />
-        <option value="$PROJECT_DIR$/../demo-filter/demo-server/pom.xml" />
-        <option value="$PROJECT_DIR$/../demo-filter/demo-gateway-api/pom.xml" />
-        <option value="$PROJECT_DIR$/../demo-filter/demo-search/pom.xml" />
-        <option value="$PROJECT_DIR$/../demo-filter/demo-server2/pom.xml" />
-        <option value="$PROJECT_DIR$/../demo-filter/demo-server3/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-server/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-gateway-api/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-search/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-server2/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-server3/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-user/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-turbine/pom.xml" />
       </list>
     </option>
   </component>
@@ -29,7 +31,7 @@
     </entry>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/../demo-filter/out" />
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="SshConsoleOptionsProvider">
     <option name="myEncoding" value="UTF-8" />
