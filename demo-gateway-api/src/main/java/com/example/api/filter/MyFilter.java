@@ -17,7 +17,7 @@ import java.nio.charset.Charset;
 /**
  * Created by Administrator on 2018/10/15/015.
  */
-@Component
+//@Component
 public class MyFilter extends ZuulFilter {
     @Override
     public String filterType() {

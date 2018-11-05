@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/demo-server2/demo-server2.iml" filepath="$PROJECT_DIR$/demo-server2/demo-server2.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-server3/demo-server3.iml" filepath="$PROJECT_DIR$/demo-server3/demo-server3.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-turbine/demo-turbine.iml" filepath="$PROJECT_DIR$/demo-turbine/demo-turbine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-upload/demo-upload.iml" filepath="$PROJECT_DIR$/demo-upload/demo-upload.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo-user/demo-user.iml" filepath="$PROJECT_DIR$/demo-user/demo-user.iml" />
     </modules>
   </component>

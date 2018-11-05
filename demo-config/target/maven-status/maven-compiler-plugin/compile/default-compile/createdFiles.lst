@@ -1,4 +1,5 @@
 com\example\config\result\ApiResult.class
+com\example\config\constant\FileTypeEnum.class
 com\example\config\servelt\ServletConfig.class
 com\example\config\util\ApiResultHelper.class
 com\example\config\para\RequestParas.class

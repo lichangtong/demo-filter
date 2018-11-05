@@ -13,11 +13,12 @@
         <module name="demo-server2" />
         <module name="demo-server3" />
         <module name="demo-turbine" />
+        <module name="demo-upload" />
         <module name="demo-user" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="demo-config" target="1.5" />
+      <module name="demo-config" target="1.8" />
       <module name="demo-filter" target="1.8" />
       <module name="demo-gateway-api" target="1.8" />
       <module name="demo-search" target="1.8" />
@@ -25,6 +26,7 @@
       <module name="demo-server2" target="1.8" />
       <module name="demo-server3" target="1.8" />
       <module name="demo-turbine" target="1.8" />
+      <module name="demo-upload" target="1.8" />
       <module name="demo-user" target="1.8" />
     </bytecodeTargetLevel>
   </component>
