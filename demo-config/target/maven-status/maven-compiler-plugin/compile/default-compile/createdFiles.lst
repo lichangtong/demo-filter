@@ -1,8 +1,10 @@
 com\example\config\result\ApiResult.class
 com\example\config\constant\FileTypeEnum.class
 com\example\config\servelt\ServletConfig.class
+com\example\config\aop\InterceptorConfig.class
 com\example\config\util\ApiResultHelper.class
 com\example\config\para\RequestParas.class
 com\example\config\exception\ApiException.class
 com\example\config\result\ApiResult$Builder.class
+com\example\config\aop\interceptor\TokenInterceptor.class
 com\example\config\constant\ResultCode.class

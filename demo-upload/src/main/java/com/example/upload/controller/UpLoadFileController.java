@@ -38,9 +38,14 @@ public class UpLoadFileController {
     public ApiResult upload(@RequestParam("files") MultipartFile[] files, HttpServletRequest request) {
         Integer fileType = null;
         try {
-            Map<String,String[]> map = request.getParameterMap();
+            Map<String, String[]> map = request.getParameterMap();
             System.out.println(map.keySet().toArray().toString());
-
+            for (Object objKey : map.keySet().toArray()) {
+                System.out.println(objKey.toString());
+                String key = objKey.toString();
+                String[] strings = map.get(key);
+                System.out.println(strings[0]);
+            }
             if (ServletFileUpload.isMultipartContent(request)) {
                 ServletFileUpload fileUpload = new ServletFileUpload();
                 FileItemIterator iter = fileUpload.getItemIterator(request);

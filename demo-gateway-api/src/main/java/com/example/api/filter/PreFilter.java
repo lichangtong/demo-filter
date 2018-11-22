@@ -48,7 +48,10 @@ public class PreFilter extends ZuulFilter {
 
     @Override
     public boolean shouldFilter() {
-        //这里可以写逻辑判断，是否要过滤，本文true,永远过滤
+        RequestContext ctx = RequestContext.getCurrentContext();
+        HttpServletRequest request = ctx.getRequest();
+        String requestURI = request.getRequestURI();
+
         return true;
     }
 

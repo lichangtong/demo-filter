@@ -36,7 +36,7 @@ public class SearchController {
     @RequestMapping("/hai")
     public ApiResult helloTest(@RequestBody RequestParas requestParas) throws Exception {
 
-        Map<String, String> map = requestParas.getMap();
+        Map<String, Object> map = requestParas.getMap();
 
         System.out.println(map);
         ApiResult apiResult = new ApiResult();
@@ -53,7 +53,7 @@ public class SearchController {
 
     @RequestMapping("/rpcBrandInfo")
     public ApiResult brandInfo(@RequestBody RequestParas requestParas) {
-        Map<String, String> map = requestParas.getMap();
+        Map<String, Object> map = requestParas.getMap();
         System.out.println(map);
         ApiResult apiResult = new ApiResult();
         apiResult.setCode(400);

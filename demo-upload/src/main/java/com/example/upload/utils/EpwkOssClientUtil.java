@@ -3,10 +3,12 @@ package com.example.upload.utils;
 
 import com.aliyun.oss.ClientConfiguration;
 import com.aliyun.oss.OSSClient;
+import com.aliyun.oss.OSSException;
 import com.aliyun.oss.common.auth.DefaultCredentialProvider;
 import com.aliyun.oss.model.DeleteObjectsRequest;
 import com.aliyun.oss.model.DeleteObjectsResult;
 import com.aliyun.oss.model.ObjectMetadata;
+import com.aliyun.oss.model.PutObjectResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
@@ -128,12 +130,18 @@ public class EpwkOssClientUtil {
         getOssClient().putObject(ossConfig.getBrucketName(), objectName, file, objectMeta);
     }
 
-    public String upLoadFile(MultipartFile file, String fileName,String fileSaveType) throws IOException {
+    public String upLoadFile(MultipartFile file, String fileName, String fileSaveType) throws IOException {
         ObjectMetadata objectMeta = new ObjectMetadata();
         objectMeta.setContentType(getContentType(fileName));
         //指定该Object被下载时的内容编码格式
         objectMeta.setContentEncoding("utf-8");
-        return getOssClient().putObject(ossConfig.getBrucketName(), fileSaveType+"/"+fileName, file.getInputStream(), objectMeta).getETag();
+        try {
+            PutObjectResult putObjectResult = getOssClient().putObject(ossConfig.getBrucketName() + "ab", fileSaveType + "/" + fileName, file.getInputStream(), objectMeta);
+            return putObjectResult.getETag();
+        } catch (OSSException e) {
+            System.out.println(e.getErrorCode()+e.getErrorMessage());
+            return null;
+        }
     }
 
     /**
