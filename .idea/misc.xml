@@ -8,10 +8,8 @@
         <option value="$PROJECT_DIR$/demo-gateway-api/pom.xml" />
         <option value="$PROJECT_DIR$/demo-search/pom.xml" />
         <option value="$PROJECT_DIR$/demo-server2/pom.xml" />
-        <option value="$PROJECT_DIR$/demo-server3/pom.xml" />
         <option value="$PROJECT_DIR$/demo-user/pom.xml" />
         <option value="$PROJECT_DIR$/demo-turbine/pom.xml" />
-        <option value="$PROJECT_DIR$/demo-upload/pom.xml" />
       </list>
     </option>
   </component>

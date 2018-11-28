@@ -16,14 +16,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StreamUtils;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.util.WebUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.InputStream;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Component
 public class PreFilter extends ZuulFilter {
@@ -61,6 +60,20 @@ public class PreFilter extends ZuulFilter {
         HttpServletRequest request = ctx.getRequest();
         String requestPath = request.getRequestURI();
         System.out.println(requestPath);
+        MultipartHttpServletRequest fileRequest;
+        //form 中包含文件
+        if (requestPath.contains("/brand/search")) {
+            fileRequest = WebUtils.getNativeRequest(request, MultipartHttpServletRequest.class);
+            fileRequest.getFile("files");
+            Enumeration<String> names = fileRequest.getParameterNames();
+            while (names.hasMoreElements()) {
+                System.out.println(names.nextElement().toString());
+            }
+        } else {
+            request.getParameterMap();
+        }
+
+
         boolean bo = false;
         for (String prefix : prefixs) {
             if (StringUtils.startsWith(requestPath.toLowerCase(), prefix)) {

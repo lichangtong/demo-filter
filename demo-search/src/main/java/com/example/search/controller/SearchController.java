@@ -7,8 +7,11 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 /**
@@ -20,12 +23,19 @@ public class SearchController {
     @Autowired
     RpcInterface rpcInterface;
 
+    @RequestMapping("/files")
+    public ApiResult searchFile(@RequestParam("files") MultipartFile[] files, HttpServletRequest request) {
+        System.out.println("------------------------");
+        return null;
+    }
+
     @RequestMapping("/search")
     public ApiResult search(@RequestBody RequestParas requestParas) {
         System.out.println("Search  say Hei 3333");
         ApiResult apiResult = new ApiResult();
         return apiResult;
     }
+
     public ApiResult hiError() {
         ApiResult apiResult = new ApiResult();
 
@@ -33,6 +43,7 @@ public class SearchController {
         apiResult.setMessage("hiError");
         return apiResult;
     }
+
     @RequestMapping("/hai")
     public ApiResult helloTest(@RequestBody RequestParas requestParas) throws Exception {
 
